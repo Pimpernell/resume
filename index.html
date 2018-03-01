@@ -1,5 +1,389 @@
-<!DOCTYPE html><html>
-<head>  
-<meta charset="UTF-8">  
-<title></title>  
-<style>   .active{    border:3px solid burlywood;   }   img{border:3px solid #fff;}  </style>  </head> <body></body></html>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>个人网站</title>
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/lib.css">
+<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic'>
+<link href='google-font.css?family=Roboto:400,100,400italic,700italic,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+<link href="css/media.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="images/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="images/kxbdSuperMarquee.js"></script>
+<script type="text/javascript" src="images/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/script.js" ></script>
+<script type="text/javascript" src="js/scrolltop.js"></script>
+<script type="text/javascript">
+<!--nav banner JQ样式开始-->
+$(document).ready(function(e) {
+    	$('#marquee3').kxbdSuperMarquee({
+				distance:1900,
+				time:2,
+				navId:'#mar3Nav',
+				direction:'left'
+			});
+		$('.nav_inner>.nav>li>a').hover(function(){
+			
+			$(this).addClass('active11')
+			},function(){
+			$(this).removeClass('active11')
+				})
+});
+		  function testAnim(x) {
+			$('#geyan').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+			$(this).removeClass();
+			});
+		
+
+  };
+
+<!--works  JQ样式开始-->
+$(document).ready(function(e) {
+	 $('.works_icons>ul>#btn_11').click(function(){
+		$('.works_icons>ul>li>a').removeClass()
+		$('.works_icons>ul>li>a').addClass('active22')
+		$('#works_pic>#box').hide()
+		$('#works_pic>#box1').hide()
+		$('#works_pic>#box').fadeIn()
+		})
+	 $('.works_icons>ul>#btn_21').click(function(){
+		$('.works_icons>ul>li>a').removeClass()
+		$('.works_icons>ul>li>a').addClass('active22')
+		$('#works_pic>#box').hide()
+		$('#works_pic>#box1').hide()
+		$('#works_pic>#box1').fadeIn()
+		})
+	$('.fancybox').fancybox();
+	});
+
+$(document).ready(function(e) {
+    $('.nav_inner>nav>a').click(function(){
+		$(this).attr().slideDown(slow)
+		
+		
+		})
+});	
+<!--EDU  JQ样式开始-->
+$(function(){
+	$(".edu_cont").eq(0).animate({
+		height:'0px'
+	},0);
+	$(".edu_cont").eq(0).animate({
+		height:'988px'
+	},10000);
+
+});
+
+<!--返回顶部JQ样式开始-->
+function goTopEx(){
+        var obj=document.getElementById("goTopBtn");
+        function getScrollTop(){
+                return document.documentElement.scrollTop;
+            }
+        function setScrollTop(value){
+                document.documentElement.scrollTop=value;
+            }    
+        window.onscroll=function(){getScrollTop()>0?obj.style.display="":obj.style.display="none";}
+        obj.onclick=function(){
+            var goTop=setInterval(scrollMove,10);
+            function scrollMove(){
+                    setScrollTop(getScrollTop()/1.1);
+                    if(getScrollTop()<1)clearInterval(goTop);
+                }
+        }
+    }
+<!--返回顶部JQ样式结束-->
+</script>
+</head>
+
+<body>
+<!--header结构样式开始-->
+<header>
+<div id="banner">
+  	<div id="marquee3">
+		<ul>
+			<li><img src="images/banner1.jpg" ></li>
+			<li><img src="images/banner3.jpg"></li>
+		</ul>
+	</div>
+	<div id="mar3Nav"></div>
+    <div class="sliderArrow fa fa-angle-down" style="transform: translateY(0px); opacity: 1;"></div>	
+     <div class="nav_inner">                                                      
+    	<ul class="nav">
+        	<li><a href="#" class="active11">HOME / 首页</a></li>
+            <li><a href="#works">WORKS / 作品</a></li>
+            <li><a href="#about">ABOUT ME / 关于我</a></li>
+            <li><a href="#contact">CONTACT / 联系</a></li>
+        </ul>
+    </div>
+    <div class="banner_bot"></div>
+	</div>
+   </header>
+<!--header结构样式结束-->
+
+<!--格言结构样式开始-->
+<section>
+	<div id="geyan">
+    	<div class="geyan_left"><img src="images/geyan_bg.png"></div>
+        <div class="geyan_right">
+        <h2>人可以改变环境，环境可以影响人，而设计则可以改变人和环境！</h2>
+        <p>People can change the environment,the environment can affect people.<br>
+<strong>and design can change people and the environment!</strong></p>
+        </div>
+    </div>
+</section>
+<!--geyan结构样式结束-->
+
+<!--works结构样式开始-->
+<section id="works">
+	<div class="works_inner">
+        <div class="title">
+        	<div class="title_left"></div>
+            <div class="title_right">
+            	<h3>作品</h3>
+                <span><p class="zs">展示</p><p class="wd">Works Display</p></span>
+            </div>
+        </div>
+        <div class="works_icons">
+        	<ul>
+            	<li id="btn_11"><a href="#box" class="active22">网页设计</a></li>
+                <li id="btn_21"><a href="#box1" >电商设计</a></li>
+                <li id="btn_31"><a href="#">UI设计</a></li>
+                <li><a href="#">前端制作</a></li>
+            </ul>
+        </div>
+        <div id="works_pic">
+                 <div id="box">
+                    <pre class="prev">prev</pre>
+                    <pre class="next">next</pre>
+                    <ul>
+                        <li><a class="fancybox" href="images/11.jpg" data-fancybox-group="gallery" ><img src="images/pics_4444_06.jpg"></a></li>
+                        <li><a class="fancybox" href="images/33.jpg" data-fancybox-group="gallery" ><img src="images/pics_4444_03.jpg"></a></li>
+                        <li><a class="fancybox" href="images/22.jpg" data-fancybox-group="gallery" ><img src="images/pics_4444_09.jpg"></a></li>
+                    </ul>
+                </div>
+                
+                 <div id="box1">
+                    <pre class="prev">prev</pre>
+                    <pre class="next">next</pre>
+                    <ul>
+                        <li><a class="fancybox" href="images/44.jpg" data-fancybox-group="gallery" ><img src="images/pic22_03.jpg"></a></li>
+                        <li><a class="fancybox" href="images/55.jpg" data-fancybox-group="gallery" ><img src="images/pic22_06.jpg"></a></li>
+                        <li><a class="fancybox" href="images/66.jpg" data-fancybox-group="gallery" ><img src="images/pic22_09.jpg"></a></li>
+                    </ul>
+                </div>
+</div>
+
+    </div>
+   </section>
+<!--works结构样式结束-->
+
+<!--about结构样式开始-->
+<section id="about">
+<div class="about_img">
+<div class="fg"></div>
+<div class="about_inner">
+	<div class="about_icons">
+    	<ul>
+        	<li>
+            	<div class="skill"><p><a href="#">Ps</a></p>
+            	</div>
+                <div class="skill_text">
+                	<h4><a href="#">Photoshop</a></h4>
+                    <p><a href="#">熟练程度：90%</a></p>
+                </div>
+            </li>
+            <li>
+            	<div class="skill"><p><a href="#">Ai</a></p>
+            	</div>
+                <div class="skill_text">
+                	<h4><a href="#">Illustrator</a></h4>
+                    <p><a href="#">熟练程度：70%</a></p>
+                </div>
+            </li>
+            <li>
+            	<div class="skill"><p><a href="#">Dw</a></p>
+            	</div>
+                <div class="skill_text">
+                	<h4><a href="#">Dreamweaver</a></h4>
+                    <p><a href="#">熟练程度：50%</a></p>
+                </div>
+            </li>
+            <li>
+            	<div class="skill"><p><a href="#">Fl</a></p>
+            	</div>
+                <div class="skill_text">
+                	<h4><a href="#">Flash</a></h4>
+                    <p><a href="#">熟练程度：30%</a></p>
+                </div>
+            </li>
+            <li>
+            	<div class="skill"><p>CDR</p>
+            	</div>
+                <div class="skill_text">
+                	<h4><a href="#">Corel DRAW</a></h4>
+                    <p><a href="#">熟练程度：90%</a></p>
+                </div>
+            </li>
+            <li>
+            	<div class="skill"><p>CAD</p>
+            	</div>
+                <div class="skill_text">
+                	<h4><a href="#">Auto CAD</a></h4>
+                    <p><a href="#">熟练程度：30%</a></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="about_me">
+    	 <div class="title1">
+        	<div class="title1_left"></div>
+            <div class="title1_right">
+            	<h3>关于</h3>
+                <span><p class="me">我</p><p class="ab">About Me</p></span>
+            </div>
+        </div>
+        <div class="about_me_text">
+        	<p>我是一名网页UI设计师，来自湖北十堰，毕业于湖北第二师范学院计算机应用技术专业。</p>
+            
+<p>拥有两年平面设计相关的工作经验。精通使用photoshop、Illustrator、CDR等软件，同时负责公司培训班的招生工作以及培训班的辅导老师。</p>
+
+<p>通过工作发觉自身了解的知识太少，几番考虑选择深造，继续学习高级平面技术，提升自身的知识含量以及技术含量。</p>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+<!--about结构样式结束-->
+
+<!--edu结构样式开始-->
+<section id="edu">
+	<div class="edu_title">
+    	  <div class="title2_left"></div>
+    	  <div class="title2_right">
+            	<h3>教育</h3>
+                <span><p class="jl">与经历</p><p class="ee">Education & Experience</p></span>
+            </div>
+        </div>
+    </div>
+<div class="edu_cont">
+	<div class="edu_content">
+    <div class="xian"></div>
+    	<ul class="time">
+        	<li>
+            	<div class="content1">
+                <p class="data1">2010-2013</p>
+                <img src="images/edu_li_bg_03.png">
+                
+                <div class="content1_text">
+                	<h3>毕业于湖北第二师范学院计算机应用技术专业</h3>
+                	<h4>在校期间学习认真，积极参加活动，获得过一些奖项，如优秀运动员。经常参加校组织的活动，以及公益爱心的活动。</h4>
+                </div>
+           	    </div>
+             </li>
+        	<li>
+            	<div class="content2">
+                <img class="con2" src="images/edu_li_bg_11.png">
+                <p class="data2">2013-2014</p>
+                <div class="content2_text">
+                	<h3>十堰蓝格广告有限公司从事平面设计师职务</h3>
+                	<h4>第一份工作是在十堰蓝格广告有限公司从事平面设计师职务。<br>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在校期间自学平面设计软件，由于比较喜欢设计，就找了家广告公司上班，上班期间主要做商场品牌活动宣传，以及各个不同公司的广告项目。</h4>
+                </div>
+           	    </div>
+            </li>
+            <li>
+            	<div class="content3">
+                <img class="con3" src="images/edu_li_bg_03.png">
+                <p class="data3">2014-2016</p>
+                <div class="content3_text">
+                	<h3>十堰蓝格广告有限公司从事平面设计师培训工作</h3>
+                	<h4>应与公司需求，从平面设计师岗位，调派到平面设计师培训部进行培训招生以及平面设计师辅导讲师工作。</h4>
+                </div>
+           	    </div>
+            </li>
+            <li>
+            	<div class="content4">
+                <img class="con4" src="images/edu_li_bg_11.png">
+                <p class="data4">2016-Now</p>
+                <div class="content4_text">
+                	<h3>参加火星时代UI设计培训</h3>
+                	<h4>    通过培训的工作，让我了解到自己对设计的兴趣，以及自身的一些不足，于是决定继续学习设计相关的知识，提高自身的设计感。</h4>
+                </div>
+           	    </div>
+            </li>
+            <li></li>
+        
+        </ul>
+    
+    </div>
+    </div>
+</section>
+<!--edu结构样式结束-->
+
+<!--geyan1结构样式开始-->
+<section id="geyan1">
+<div class="colors">
+	<div class="geyan1_inner">
+        <h2>人可以改变环境，环境可以影响人，而设计则可以改变人和环境！</h2>
+        <p>People can change the environment,the environment can affect people.<br>
+<strong>and design can change people and the environment!</strong></p>
+        </div></div>
+</section>
+<!--geyan1结构样式结束-->
+
+<!--contact结构样式开始-->
+<section id="contact">
+	<div class="contact_title">
+    	  <div class="title3_left"></div>
+    	  <div class="title3_right">
+            	<h3>联系</h3>
+                <span><p class="lx">方式</p><p class="cm">Contact Me</p></span>
+            </div>
+        </div>
+     <div class="ziliao">
+     	<div class="ziliao_l">
+        	<ul class="ziliao_icons">
+            	<li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="ziliao_text">
+            	<li>Name：赵紫艳 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sex：女</li>
+                <li>Occupation：网页设计师 & UI设计师</li>
+                <li>Hobby：设计、羽毛球、音乐、画画</li>
+                <li>Tel:13997813695 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15527935076</li>
+                <li>E-mail:844620422@qq.com</li>
+            </ul>
+        </div>
+         <div class="ziliao_r">
+     	<form>
+        	<input type="text" value="姓名">
+            <input type="text" value="邮箱">
+            <input type="text" value="电话">
+            <textarea >内容</textarea>
+           
+        </form>
+        <input type="submit" value="提    交" class="buttom1">
+     </div>
+     <div class="clear"></div>
+     </div>
+   
+</section>
+<!--contact结构样式结束-->
+
+<!--返回顶部结构样式开始-->
+<div style="display: none" id=goTopBtn><img border=0 src="images/lanren_top.jpg"></div>
+<script type="text/javascript">goTopEx();</script>
+<!--返回顶部结构样式结束-->
+
+<!--音乐结构样式开始-->
+<audio src="media/Jason Chen - Unexpectedly.mp3" autoplay></audio>
+</body>
+</html>

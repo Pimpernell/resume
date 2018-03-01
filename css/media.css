@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width:980px){
+	#banner{
+		width:100%;
+		}
+	#geyan{
+		width:100%;
+		}
+	#works{
+		width:100%;
+		}
+	#edu{
+		width:100%;
+		}
+	#contact{
+		width:100%;
+		}
+	}
+
+@media screen and (max-width:640px){
+	article{
+		width:98%;
+		padding-left:1%;
+		padding-right:1%;
+		margin-bottom:60px;
+		float:none;
+		}
+	aside{
+		width:100%;
+		float:none;
+		}
+	form input{
+		position:absolute;
+		top:-40px;
+		right:0;
+		transition:1s;
+		width:60px;
+		}
+	form input:focus{
+	width:100px;
+	}
+	}
+	
+@media screen and (max-width:480px){
+	aside{
+		display:none;
+		}
+	}

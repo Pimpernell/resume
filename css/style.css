@@ -1,0 +1,42 @@
+@charset "utf-8";
+/*科e互联特效基本框架CSS*/
+body, ul, dl, dd, dt, ol, li, p, h1, h2, h3, h4, h5, h6, textarea, form, select, fieldset, table, td, div, input {margin:0;padding:0;-webkit-text-size-adjust: none}
+h1, h2, h3, h4, h5, h6{font-size:12px;font-weight:normal}
+body>div{margin:0 auto}
+div {text-align:left}
+a img {border:0}
+body { color: #333; text-align: center; font: 12px "微软雅黑"; }
+ul, ol, li {list-style-type:none;vertical-align:0}
+a {outline-style:none;color:#535353;text-decoration:none}
+a:hover { color: #D40000; text-decoration: none}
+.clear{height:0; overflow:hidden; clear:both}
+
+/*科e互联特效基本框架CSS结束，应用特效时，以上样式可删除*/
+/*样式格式化*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td { margin: 0; padding: 0; }
+fieldset, img { border: 0; }
+img { display:inline-block; }
+
+ol, ul { list-style: none outside none; }
+#wrapper{ width:502px;margin:auto;position:absolute;left:200px;top:20px;display:block;}
+	
+.show_images_list_li {
+position: absolute;
+cursor: pointer;
+vertical-align:bottom; display:block;
+}
+
+#wrapper1{ width:502px;margin:auto;position:absolute;left:200px;top:20px;display:block;}
+	
+.show_images_list1_li1 {
+position: absolute;
+cursor: pointer;
+vertical-align:bottom; display:block;
+}
+
+#belt {display: block;height: 122px;left: 400px;line-height: 1000px;overflow: hidden;position: absolute;top: 1px;width: 149px;
+background:url(../features6.6/images/beltnew1.png) no-repeat; background:url(../features6.6/images/images/beltnew.png) no-repeat\0; z-index:100;}
+
+.btn { width:101px; height:25px; margin:auto; position:relative; padding-top:350px;}
+.btn  a{width:17px; height:15px; overflow:none; display:block;background:url(../features6.6/images/btn.jpg)  no-repeat; cursor: pointer;float:left;}
+.btn  a.active{ background:url(../features6.6/images/btn.jpg) -17px 0 no-repeat;}
